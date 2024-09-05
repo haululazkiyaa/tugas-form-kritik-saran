@@ -24,7 +24,7 @@ const useFeedback = () => {
 
   const deleteFeedback = (index) => {
     const confirmDelete = window.confirm(
-      "Are you sure you want to delete this feedback?"
+      "Apakah anda yakin akan menghapus feedback?"
     );
     if (confirmDelete) {
       const newFeedbackList = [...feedbackList];
