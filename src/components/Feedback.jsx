@@ -20,13 +20,13 @@ const Feedback = () => {
           placeholder="Nama"
           value={inputName}
           onChange={(e) => setInputName(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2"
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 mb-2 dark:text-black"
         />
         <textarea
           placeholder="Saran Anda..."
           value={inputFeedback}
           onChange={(e) => setInputFeedback(e.target.value)}
-          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+          className="w-full p-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400 dark:text-black"
         />
       </div>
       <button
