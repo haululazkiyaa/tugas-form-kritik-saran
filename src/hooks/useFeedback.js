@@ -39,14 +39,17 @@ const useFeedback = () => {
 
   useEffect(() => {
     if (localStorage.getItem("feedbackList") === null) {
-      const initialFeedback = [
-        {
-          name: "Budi Susilo Maulana",
-          feedback: "Harga Produknya supaya bisa lebih murah dari tempat lain",
-          likes: 0,
-        },
-      ];
-      localStorage.setItem("feedbackList", JSON.stringify(initialFeedback));
+      // INITIAL FEEDBACK
+      // const initialFeedback = [
+      //   {
+      //     name: "Budi Susilo Maulana",
+      //     feedback: "Harga Produknya supaya bisa lebih murah dari tempat lain",
+      //     likes: 0,
+      //   },
+      // ];
+      // localStorage.setItem("feedbackList", JSON.stringify(initialFeedback));
+
+      localStorage.setItem("feedbackList", JSON.stringify([]));
     }
 
     setFeedbackList(JSON.parse(localStorage.getItem("feedbackList")));
