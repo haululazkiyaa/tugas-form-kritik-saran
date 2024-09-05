@@ -8,6 +8,7 @@ const Feedback = () => {
     setInputFeedback,
     feedbackList,
     submitFeedback,
+    deleteFeedback,
     likeFeedback,
   } = useFeedback();
 
@@ -45,13 +46,21 @@ const Feedback = () => {
               <p className="font-bold">{item.name}</p>
               <p>{item.feedback}</p>
             </div>
-            <button
-              onClick={() => likeFeedback(index)}
-              className="px-3 py-1 bg-teal-500 text-white rounded-md hover:bg-teal-600"
-            >
-              <i className="fa-solid fa-thumbs-up me-1"></i> {item.likes}{" "}
-              {item.likes > 1 ? "Likes" : "Like"}
-            </button>
+            <div className="space-x-2">
+              <button
+                onClick={() => deleteFeedback(index)}
+                className="px-3 py-1 bg-red-500 text-white rounded-md hover:bg-red-600"
+              >
+                <i className="fa-solid fa-trash"></i>
+              </button>
+              <button
+                onClick={() => likeFeedback(index)}
+                className="px-3 py-1 bg-teal-500 text-white rounded-md hover:bg-teal-600"
+              >
+                <i className="fa-solid fa-thumbs-up me-1"></i> {item.likes}{" "}
+                {item.likes > 1 ? "Likes" : "Like"}
+              </button>
+            </div>
           </div>
         ))}
       </div>

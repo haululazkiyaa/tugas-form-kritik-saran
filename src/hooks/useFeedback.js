@@ -18,6 +18,18 @@ const useFeedback = () => {
     setInputFeedback("");
   };
 
+  const deleteFeedback = (index) => {
+    const confirmDelete = window.confirm(
+      "Are you sure you want to delete this feedback?"
+    );
+    if (confirmDelete) {
+      const newFeedbackList = [...feedbackList];
+      newFeedbackList.splice(index, 1);
+      setFeedbackList(newFeedbackList);
+      localStorage.setItem("feedbackList", JSON.stringify(newFeedbackList));
+    }
+  };
+
   const likeFeedback = (index) => {
     const newFeedbackList = [...feedbackList];
     newFeedbackList[index].likes += 1;
@@ -47,6 +59,7 @@ const useFeedback = () => {
     setInputFeedback,
     feedbackList,
     submitFeedback,
+    deleteFeedback,
     likeFeedback,
   };
 };
