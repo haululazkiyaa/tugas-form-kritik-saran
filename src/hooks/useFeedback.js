@@ -16,6 +16,10 @@ const useFeedback = () => {
 
     setInputName("");
     setInputFeedback("");
+
+    alert(
+      "Terima kasih telah memberikan feedback! Kami sangat senang mendengarnya."
+    );
   };
 
   const deleteFeedback = (index) => {
